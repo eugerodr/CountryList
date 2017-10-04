@@ -43,9 +43,9 @@ public class CountryListActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View item, int pos, long id) {
                 country_list.remove(pos);
-                return false;
+                adapter.notifyDataSetChanged();
+                return true;
             }
         });
-
     }
 }
